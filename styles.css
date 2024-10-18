@@ -1,0 +1,204 @@
+/* General reset and box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8ff;
+    font-family: 'Josefin Sans', josefin-sans;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container styling for centering content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+/* Content styling for centering inner content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Align post text to justify */
+.post p {
+    text-align: justify;
+font-size: 22px;
+font-weight: slight;
+}
+
+.content p {
+    text-align: justify;
+font-size: 20px;
+}
+
+.content h1 {
+    text-align: justify;
+font-size: 40px;
+text-shadow: 2px 2px #ADD8E6;
+}
+
+/* Header container for SVG and text */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* SVG container styling */
+.png-container {
+    width: 300px;
+    height: 300px;
+	margin-top: 140px;
+    margin-right: 40px;
+}
+
+.png-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Text container styling within header */
+.header .text-container {
+    text-align: left;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;    /* Make the main heading bigger */
+}
+
+.header h2 {
+    margin: 5px 0 0;
+    font-size: 40px; /* Secondary heading size */
+	font-weight: lighter;
+}
+
+
+ .links-container {
+    display: flex;
+margin-top: -100px;
+margin-bottom: 60px;
+    gap: 120px;
+    width: 90%;
+}
+
+
+.links-container a {
+text-align: center;
+    text-decoration: none;
+    color: #787878;
+    font-size: 36px;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+
+.links-container a:hover {
+    color: #000000;
+}
+
+/* end of links and other stuff */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #191970;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+footer .heart {
+    color: red;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+footer a:hover {
+    color: #fd9400;
+    border-bottom-color: #fd9400;
+}
+
+/* Styles for larger screens */
+@media (min-width: 601px) {
+    .links-container {
+        margin-right: -100px; /* Apply only to larger screens */
+    }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        max-width: 325px; /* Limit the width for mobile devices */
+        margin: auto; /* Center the content */
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .png-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .header .text-container {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+text-align: center;
+        margin-top: 20px;
+        font-size: 22px; /* Smaller size for mobile */
+    }
+
+    .header h2 {
+text-align: center;
+        font-size: 22px; /* Smaller size for mobile */
+    }
+
+    .links-container {
+margin-top: 3px;
+margin-bottom: 60px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Add some space between the links */
+    }
+
+    .links-container a {
+        margin-bottom: 10px;
+        font-size: 22px; /* Smaller size for mobile */
+    }
+
+    hr {
+        display: none; /* Remove the horizontal line */
+    }
+}
